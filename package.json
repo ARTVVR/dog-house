@@ -25,7 +25,6 @@
     "@ngxs/devtools-plugin": "^3.7.3",
     "@ngxs/store": "^3.7.3",
     "rxjs": "~7.5.0",
-    "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -55,6 +54,7 @@
     "karma-jasmine-html-reporter": "~1.7.0",
     "prettier": "^2.6.0",
     "prettier-eslint": "^13.0.0",
+    "tslib": "^2.4.0",
     "typescript": "~4.5.2"
   }
 }
