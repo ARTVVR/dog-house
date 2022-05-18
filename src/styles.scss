@@ -106,6 +106,7 @@ section {
 a,
 a:visited,
 a:hover {
+  color: unset;
   text-decoration: none;
 }
 
@@ -147,7 +148,9 @@ body {
 
 body {
   margin: 0;
+  overflow: overlay;
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 }
 
 html,
@@ -162,4 +165,12 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #383636;
 }
