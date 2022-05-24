@@ -4,7 +4,6 @@
   .main {
     position: relative;
     max-width: 1440px;
-    height: 100%;
 
     .main-section {
       width: 100vw;
@@ -211,7 +210,6 @@
             margin-top: 80px;
             max-width: 100%;
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
 
@@ -261,7 +259,7 @@
 
 
             .photo-dog {
-              max-width: 400px;
+              max-width: 26vw;
               height: auto;
             }
           }
@@ -269,101 +267,153 @@
       }
     }
   }
-}
 
-@media (max-width: 1203px) {
+  .salon-gallery {
+    width: 100vw;
+    height: auto;
 
-  .photo-block-content {
-    flex-direction: column;
+    .container-gallery {
+      position: relative;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 40px 20px;
+
+      .gallery-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .photo-img {
+          max-width: 30vw;
+          min-width: 200px;
+
+          height: auto;
+          margin: 5px;
+        }
+      }
+    }
   }
 
-  .right-side-block {
-    width: 100% !important;
+  .map-section {
+    width: 100vw;
+    height: auto;
+    background: #212529;
+
+    .map-container {
+      position: relative;
+      max-width: 1440px;
+      height: 500px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
   }
 
-  .story-upper-section {
-    justify-content: center !important;
+  @media (max-width: 1204px) {
+    .photo-dog {
+      max-width: 300px !important;
+    }
+
+    .photo-block-content {
+      flex-direction: column;
+    }
+
+    .right-side-block {
+      width: 100% !important;
+    }
+
+    .story-upper-section {
+      justify-content: center !important;
+    }
+
+    .left-side-info-content {
+      font-size: 22px !important;
+    }
+
+    .story-title,
+    .left-side-title {
+      font-size: 38px !important;
+    }
+
+    .main-section {
+      height: 700px !important;
+    }
   }
 
-  .left-side-info-content {
-    font-size: 22px !important;
+  @media (max-width:750px) {
+
+    .story-description {
+      width: 100% !important;
+      line-height: 35px !important;
+    }
+
+    .left-side-upper-block {
+      width: 100% !important;
+    }
+
+    .gallery-box {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .photo-img {
+      max-width: 100% !important;
+    }
+
+    .story-title,
+    .left-side-title,
+    .title-photo-section {
+      font-size: 36px !important;
+    }
+
+    .left-side-info-content,
+    .title {
+      font-size: 22px !important;
+    }
+
+    .container {
+      backdrop-filter: blur(5px) !important;
+    }
+
   }
 
-  .story-title,
-  .left-side-title {
-    font-size: 38px !important;
-  }
+  @media (max-width:490px) {
 
-  .main-section {
-    height: 700px !important;
-  }
-}
+    .upper-section {
+      margin-top: 0 !important;
+    }
 
-@media (max-width:750px) {
+    .photo-block-content {
+      margin-top: 50px !important;
+    }
 
-  .story-description {
-    width: 100% !important;
-    line-height: 35px !important;
-  }
+    .about-service {
+      margin: 20px 0 !important;
+    }
 
-  .left-side-upper-block {
-    width: 100% !important;
-  }
+    .round-icon {
+      width: 30px !important;
+      height: 30px !important;
+    }
 
-  .story-title,
-  .left-side-title,
-  .title-photo-section {
-    font-size: 36px !important;
-  }
+    .photo-dog {
+      // max-width: 100% !important;
+      min-width: 240px !important;
+    }
 
-  .left-side-info-content,
-  .title {
-    font-size: 22px !important;
-  }
+    .story-title,
+    .left-side-title,
+    .title-photo-section {
+      font-size: 31px !important;
+    }
 
-  .container {
-    backdrop-filter: blur(5px) !important;
-  }
+    .story-description,
+    .left-side-info-content,
+    .title {
+      font-size: 16px !important;
+    }
 
-}
-
-@media (max-width:490px) {
-
-  .upper-section {
-    margin-top: 0 !important;
-  }
-
-  .photo-block-content {
-    margin-top: 50px !important;
-  }
-
-  .about-service {
-    margin: 20px 0 !important;
-  }
-
-  .round-icon {
-    width: 30px !important;
-    height: 30px !important;
-  }
-
-  .photo-dog {
-    max-width: 100% !important;
-    min-width: 210px !important;
-  }
-
-  .story-title,
-  .left-side-title,
-  .title-photo-section {
-    font-size: 31px !important;
-  }
-
-  .story-description,
-  .left-side-info-content,
-  .title {
-    font-size: 16px !important;
-  }
-
-  .block-phone-number {
-    margin-top: 25px !important;
+    .block-phone-number {
+      margin-top: 25px !important;
+    }
   }
 }
