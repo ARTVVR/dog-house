@@ -1,12 +1,16 @@
 <header class="header">
   <div class="header-container">
     <div class="up-header">
-      <div routerLink="/" class="logo-block burger-logo-block">
+      <a
+        href="#main-section"
+        routerLink="/"
+        class="logo-block burger-logo-block"
+      >
         <mat-icon class="title-logo">pets</mat-icon>
         <span class="title-logo log" (click)="isVisibleBurger = false">
           Дог Хаус
         </span>
-      </div>
+      </a>
       <div class="information-content">
         <button matTooltip="время работы" class="social-networks" mat-button>
           <mat-icon>schedule</mat-icon>

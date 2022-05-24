@@ -42,12 +42,16 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { TextFieldModule } from '@angular/cdk/text-field';
+import { WavesModule, ButtonsModule, IconsModule } from 'angular-bootstrap-md';
 
 const MaterialComponents = [
   CommonModule,
   MatAutocompleteModule,
+  IconsModule,
   MatCheckboxModule,
   MatDatepickerModule,
+  ButtonsModule,
+  WavesModule,
   MatFormFieldModule,
   MatInputModule,
   MatRadioModule,
