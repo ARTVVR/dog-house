@@ -1,1 +1,118 @@
-<p>main works!</p>
+<main class="main">
+  <section class="main-section">
+    <div class="container">
+      <div class="upper-section">
+        <div class="left-side-upper-block">
+          <h1 class="left-side-title">Стрижка собак и котов</h1>
+          <p class="left-side-info-content">
+            Стрижка, мытье, сушка, полный комплекс услуг
+          </p>
+          <button
+            class="more-btn"
+            color="primary"
+            type="button"
+            mat-raised-button
+            routerLink="/about-us"
+          >
+            Подробнее...
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story-section">
+    <div class="container-story">
+      <div class="story-upper-section">
+        <div class="left-side-block">
+          <img
+            draggable="false"
+            src="https://pets-grooming.axiomthemes.com/wp-content/uploads/2016/07/image-30.jpg"
+            alt="Dog & Cat"
+          />
+        </div>
+        <div class="right-side-block">
+          <h2 class="story-title">Наша история</h2>
+          <p class="story-description">
+            Мы занимаемся грумингом уже много лет и любим каждую часть своей
+            работы! Мы обеспечиваем очень теплую и дружелюбную среду для ваших
+            питомцев. Наша профессиональная команда позаботилась о том, чтобы о
+            вашем питомце всегда заботились на самом высоком уровне, потому что
+            мы относимся ко всем питомцам, как к своим!
+          </p>
+          <div class="other-info-block">
+            <button color="primary" mat-raised-button>Свяжитесь с нами</button>
+            <p class="block-phone-number">
+              <span>или позвоните нам:</span>
+              <a href="tel: 80 29 118-16-36" class="phone-number"
+                >80(29)-118-16-36</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="photo-section">
+    <div class="container-photo">
+      <div class="photo-upper-section">
+        <div class="title-photo-section">Наши услуги</div>
+        <div class="photo-block-content">
+          <div class="left-photo-block">
+            <div class="title-photo-block">
+              <h4 class="title">Полный уход</h4>
+              <span class="round-icon"><mat-icon>content_cut</mat-icon></span>
+            </div>
+            <p class="about-service">
+              С нами ваш питомец в надежных руках! Пусть ваш любимый получит
+              лучший уход в нашем салоне.
+            </p>
+            <div class="title-photo-block">
+              <h4 class="title">Ванна и сушка</h4>
+              <span class="round-icon"> <mat-icon>pets</mat-icon></span>
+            </div>
+            <p class="about-service">
+              Мы используем большой ассортимент шампуней для всех типов шерсти и
+              пород.
+            </p>
+          </div>
+          <div class="center-photo-block">
+            <img-comparison-slider class="comparison-slider">
+              <img
+                class="photo-dog"
+                slot="first"
+                src="../../../assets/jpg/dog-after/dog-1-after.jpeg"
+                alt="Dog after haircut"
+              />
+              <img
+                class="photo-dog"
+                slot="second"
+                src="../../../assets/jpg/dog-before/dog-1-before.jpeg"
+                alt="Dog before haircut"
+              />
+            </img-comparison-slider>
+          </div>
+          <div class="right-photo-block">
+            <div class="title-photo-block">
+              <h4 class="title">Стайлинг</h4>
+              <span class="round-icon"><mat-icon>speed</mat-icon></span>
+            </div>
+            <p class="about-service">
+              Наша команда стилистов-парикмахеров рада сделать ваше животное
+              красивым и счастливым.
+            </p>
+            <div class="title-photo-block">
+              <h4 class="title">Лечебная ванна</h4>
+              <span class="round-icon"><mat-icon>shower</mat-icon></span>
+            </div>
+            <p class="about-service">
+              Купание в нашей ветеринарной ванне с использованием подходящего
+              шампуня, благоприятного для кожи питомца.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

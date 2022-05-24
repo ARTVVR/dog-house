@@ -1,9 +1,9 @@
 <header class="header">
   <div class="header-container">
     <div class="up-header">
-      <div routerLink="/" class="logo-block">
+      <div routerLink="/" class="logo-block burger-logo-block">
         <mat-icon class="title-logo">pets</mat-icon>
-        <span class="title-logo" (click)="isVisibleBurger = false">
+        <span class="title-logo log" (click)="isVisibleBurger = false">
           Дог Хаус
         </span>
       </div>
@@ -38,6 +38,14 @@
           </button>
         </a>
         <span class="networks-info">Ул. Константина Заслонова 49</span>
+        <button
+          #burger
+          (click)="isVisibleBurger = true"
+          class="upper-burger"
+          mat-button
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
       </div>
     </div>
     <div class="main-header">
@@ -75,7 +83,7 @@
         </ul>
       </div>
       <span class="title-header">
-        Стрижка собак и кошек <br />
+        Груминг салон в <br />
         <a
           target="_blank"
           href="https://www.google.com/maps/place/%D0%94%D0%BE%D0%B3+%D0%A5%D0%B0%D1%83%D1%81/@52.7857833,27.5211671,15z/data=!4m5!3m4!1s0x0:0x451577b1547ed00f!8m2!3d52.7857833!4d27.5211671"
@@ -96,97 +104,112 @@
   </div>
 </header>
 
-<div *ngIf="isVisibleBurger" class="burger-block burger-menu">
-  <div class="header-burger">
+<div class="burger-container" *ngIf="isVisibleBurger">
+  <div routerLink="/" (click)="isVisibleBurger = false" class="logo-block">
+    <div>
+      <mat-icon class="title-logo">pets</mat-icon>
+      <span class="title-logo log"> Дог Хаус </span>
+    </div>
     <button class="close-btn" (click)="isVisibleBurger = false" mat-button>
       <mat-icon>close</mat-icon>
     </button>
   </div>
-  <div class="burger-main-content">
-    <ul class="burger-list">
-      <button
-        (click)="isVisibleBurger = false"
-        routerLink=""
-        routerLinkActive="active-link"
-        [routerLinkActiveOptions]="{ exact: true }"
-        mat-stroked-button
-        class="btn-link-burger"
-      >
-        <li>Главная</li>
+  <div class="burger-block">
+    <div class="header-burger">
+      <button class="close-btn" (click)="isVisibleBurger = false" mat-button>
+        <mat-icon>close</mat-icon>
       </button>
-      <button
-        (click)="isVisibleBurger = false"
-        routerLink="/contacts"
-        routerLinkActive="active-link"
-        mat-stroked-button
-        class="btn-link-burger"
-      >
-        <li>Контакты</li>
-      </button>
-      <button
-        (click)="isVisibleBurger = false"
-        routerLinkActive="active-link"
-        routerLink="/gallery"
-        mat-stroked-button
-        class="btn-link-burger"
-      >
-        <li>Галерея</li>
-      </button>
-      <button
-        (click)="isVisibleBurger = false"
-        routerLink="/about-us"
-        mat-stroked-button
-        routerLinkActive="active-link"
-        class="btn-link-burger"
-      >
-        <li>О нас</li>
-      </button>
-    </ul>
-  </div>
-  <div class="burger-networks">
-    <ul class="burger-networks-list">
-      <a>
+    </div>
+    <div class="burger-main-content">
+      <ul class="burger-list">
         <button
-          matTooltip="время работы"
-          class="social-burger-networks"
-          mat-button
+          (click)="isVisibleBurger = false"
+          routerLink=""
+          routerLinkActive="active-link"
+          [routerLinkActiveOptions]="{ exact: true }"
+          mat-stroked-button
+          class="btn-link-burger"
         >
-          <mat-icon>schedule</mat-icon>
-          <span class="networks-burger-info">Пн. — Сб. 10:00–20:00</span>
+          <li>Главная</li>
         </button>
-      </a>
-      <a href="tel: +375 29 118-16-36">
-        <button matTooltip="phone" class="social-burger-networks" mat-button>
-          <mat-icon>phone</mat-icon>
-          <span class="networks-burger-info">+375 29 118-16-36</span>
+        <button
+          (click)="isVisibleBurger = false"
+          routerLink="/contacts"
+          routerLinkActive="active-link"
+          mat-stroked-button
+          class="btn-link-burger"
+        >
+          <li>Контакты</li>
         </button>
-      </a>
+        <button
+          (click)="isVisibleBurger = false"
+          routerLinkActive="active-link"
+          routerLink="/gallery"
+          mat-stroked-button
+          class="btn-link-burger"
+        >
+          <li>Галерея</li>
+        </button>
+        <button
+          (click)="isVisibleBurger = false"
+          routerLink="/about-us"
+          mat-stroked-button
+          routerLinkActive="active-link"
+          class="btn-link-burger"
+        >
+          <li>О нас</li>
+        </button>
+      </ul>
+    </div>
+    <div class="burger-networks">
+      <ul class="burger-networks-list">
+        <a>
+          <button
+            matTooltip="время работы"
+            class="social-burger-networks"
+            mat-button
+          >
+            <mat-icon>schedule</mat-icon>
+            <span class="networks-burger-info">Пн. — Сб. 10:00–20:00</span>
+          </button>
+        </a>
+        <a href="tel: +375 29 118-16-36">
+          <button matTooltip="phone" class="social-burger-networks" mat-button>
+            <mat-icon>phone</mat-icon>
+            <span class="networks-burger-info">+375 29 118-16-36</span>
+          </button>
+        </a>
 
-      <a target="_blank" href="https://www.instagram.com/dog.house.sol/">
-        <button
-          matTooltip="instagram"
-          class="social-burger-networks"
-          mat-button
+        <a target="_blank" href="https://www.instagram.com/dog.house.sol/">
+          <button
+            matTooltip="instagram"
+            class="social-burger-networks"
+            mat-button
+          >
+            <img
+              class="instagram-burger-icon"
+              src="../../../assets/png/instagram.png"
+              alt="instagram"
+            />
+            <span class="networks-burger-info">@dog.house.sol</span>
+          </button>
+        </a>
+        <a
+          target="_blank"
+          href="https://www.google.com/maps/place/%D0%94%D0%BE%D0%B3+%D0%A5%D0%B0%D1%83%D1%81/@52.7857833,27.5211671,15z/data=!4m5!3m4!1s0x0:0x451577b1547ed00f!8m2!3d52.7857833!4d27.5211671"
         >
-          <img
-            class="instagram-burger-icon"
-            src="../../../assets/png/instagram.png"
-            alt="instagram"
-          />
-          <span class="networks-burger-info">@dog.house.sol</span>
-        </button>
-      </a>
-      <a
-        target="_blank"
-        href="https://www.google.com/maps/place/%D0%94%D0%BE%D0%B3+%D0%A5%D0%B0%D1%83%D1%81/@52.7857833,27.5211671,15z/data=!4m5!3m4!1s0x0:0x451577b1547ed00f!8m2!3d52.7857833!4d27.5211671"
-      >
-        <button matTooltip="location" class="social-burger-networks" mat-button>
-          <mat-icon>location_on</mat-icon>
-          <span class="networks-burger-info">
-            Ул. Константина Заслонова 49
-          </span>
-        </button>
-      </a>
-    </ul>
+          <button
+            matTooltip="location"
+            class="social-burger-networks"
+            mat-button
+          >
+            <mat-icon>location_on</mat-icon>
+            <span class="networks-burger-info">
+              Ул. Константина Заслонова 49
+            </span>
+          </button>
+        </a>
+      </ul>
+    </div>
   </div>
 </div>

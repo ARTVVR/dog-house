@@ -1,0 +1,369 @@
+:host {
+  position: relative;
+
+  .main {
+    position: relative;
+    max-width: 1440px;
+    height: 100%;
+
+    .main-section {
+      width: 100vw;
+      height: 791px;
+      background: url(../../../assets/jpg/background/dog-ace.jpg);
+      background-size: cover;
+      background-position-x: right;
+      background-repeat: no-repeat;
+
+      .container {
+        position: relative;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        height: 100%;
+
+        .upper-section {
+          width: 100%;
+          display: flex;
+          margin-top: 130px;
+          align-items: center;
+          justify-content: space-between;
+
+          .left-side-upper-block {
+            color: #DCDCDC;
+            margin-top: 150px;
+            width: 49%;
+
+            .left-side-title {
+              position: relative;
+              font-family: Georgia, serif;
+              font-size: 48px;
+              font-weight: bold;
+              line-height: 60px;
+              letter-spacing: 2px;
+              font-family: 'Comfortaa', cursive;
+              white-space: normal;
+              text-shadow: 3px 3px 2px #00000098;
+
+              &:after {
+                content: '';
+                position: absolute;
+                bottom: -40px;
+                left: 0;
+                height: 5px;
+                width: 98%;
+                max-width: 100%;
+                border-radius: 10px;
+                background-color: #ffffff3b;
+              }
+            }
+
+            .left-side-info-content {
+              max-width: 500px;
+              margin-top: 60px;
+              line-height: 40px;
+              text-shadow: 3px 3px 2px #00000098;
+              font-family: 'Lato', sans-serif;
+              font-size: 24px;
+            }
+
+            .more-btn {
+              margin-top: 20px;
+            }
+          }
+
+          .right-side-upper-block {
+            position: relative;
+            width: 326px;
+            height: auto;
+
+            .dog-img {
+              position: absolute;
+              bottom: -337px;
+              right: 0;
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+
+    .story-section {
+      top: 791px;
+      width: 100vw;
+      min-height: 591px;
+      background: #ffffff;
+      background-size: cover;
+      background-position-x: right;
+      background-repeat: no-repeat;
+
+      .container-story {
+        position: relative;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 100px 20px;
+
+        .story-upper-section {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+
+          .left-side-block {
+            img {
+              max-width: 100%;
+              height: auto;
+            }
+          }
+
+          .right-side-block {
+            width: 50%;
+
+            .story-title {
+              font-size: 48px;
+              font-family: 'Comfortaa', cursive;
+            }
+
+            .story-description {
+              margin-top: 40px;
+              margin-bottom: 30px;
+              font-size: 17px;
+              line-height: 40px;
+              color: #787878;
+              font-family: 'Lato', sans-serif;
+            }
+
+            .other-info-block {
+              display: flex;
+              align-items: center;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              font-family: 'Lato', sans-serif;
+
+              button {
+                color: white;
+              }
+
+              .block-phone-number {
+                display: flex;
+                flex-wrap: wrap;
+                color: #787878;
+                font-weight: bold;
+                font-size: 20px;
+                margin: 0;
+
+                span {
+                  margin-right: 20px;
+                }
+
+                .phone-number {
+                  color: #ff9800;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .photo-section {
+      width: 100vw;
+      background: url(https://pets-grooming.axiomthemes.com/wp-content/uploads/2016/07/background-6.jpg?id=211);
+      height: max-content;
+
+      .container-photo {
+        position: relative;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 80px 20px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        .photo-upper-section {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: space-between;
+          color: #ffffff;
+
+          .title-photo-section {
+            text-align: center;
+            font-weight: bold;
+            font-size: 40px;
+            font-family: 'Comfortaa', cursive;
+            position: relative;
+
+            &:after {
+              content: '';
+              position: absolute;
+              bottom: -30px;
+              left: 0;
+              width: 100%;
+              height: 1px;
+              background-color: #787878;
+              border-radius: 50%;
+            }
+          }
+
+          .photo-block-content {
+            margin-top: 80px;
+            max-width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+            .center-photo-block {
+              margin-left: 50px;
+              margin-right: 50px;
+            }
+
+            .left-photo-block,
+            .right-photo-block {
+              max-width: 300px;
+              display: flex;
+              flex-direction: column;
+              margin-top: 30px;
+
+              .about-service {
+                margin: 40px 0;
+                color: #787878;
+                font-size: 16px;
+                font-style: italic;
+                font-family: 'Lato', sans-serif;
+              }
+
+              .title-photo-block {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .title {
+                  margin: 0;
+                  font-size: 26px;
+                  font-family: 'Comfortaa', cursive;
+                  font-weight: bold;
+                }
+
+                .round-icon {
+                  width: 40px;
+                  height: 40px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  background-color: orange;
+                  border-radius: 50%;
+                }
+              }
+            }
+
+
+            .photo-dog {
+              max-width: 400px;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1203px) {
+
+  .photo-block-content {
+    flex-direction: column;
+  }
+
+  .right-side-block {
+    width: 100% !important;
+  }
+
+  .story-upper-section {
+    justify-content: center !important;
+  }
+
+  .left-side-info-content {
+    font-size: 22px !important;
+  }
+
+  .story-title,
+  .left-side-title {
+    font-size: 38px !important;
+  }
+
+  .main-section {
+    height: 700px !important;
+  }
+}
+
+@media (max-width:750px) {
+
+  .story-description {
+    width: 100% !important;
+    line-height: 35px !important;
+  }
+
+  .left-side-upper-block {
+    width: 100% !important;
+  }
+
+  .story-title,
+  .left-side-title,
+  .title-photo-section {
+    font-size: 36px !important;
+  }
+
+  .left-side-info-content,
+  .title {
+    font-size: 22px !important;
+  }
+
+  .container {
+    backdrop-filter: blur(5px) !important;
+  }
+
+}
+
+@media (max-width:490px) {
+
+  .upper-section {
+    margin-top: 0 !important;
+  }
+
+  .photo-block-content {
+    margin-top: 50px !important;
+  }
+
+  .about-service {
+    margin: 20px 0 !important;
+  }
+
+  .round-icon {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .photo-dog {
+    max-width: 100% !important;
+    min-width: 210px !important;
+  }
+
+  .story-title,
+  .left-side-title,
+  .title-photo-section {
+    font-size: 31px !important;
+  }
+
+  .story-description,
+  .left-side-info-content,
+  .title {
+    font-size: 16px !important;
+  }
+
+  .block-phone-number {
+    margin-top: 25px !important;
+  }
+}
