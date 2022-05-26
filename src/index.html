@@ -27,10 +27,6 @@
       href="https://fonts.googleapis.com/css2?family=Anton&family=Comfortaa:wght@300&family=Lato:wght@100&display=swap"
       rel="stylesheet"
     />
-    <script
-      defer
-      src="https://unpkg.com/img-comparison-slider@7/dist/index.js"
-    ></script>
     <link
       rel="stylesheet"
       href="https://unpkg.com/img-comparison-slider@7/dist/styles.css"
@@ -46,11 +42,27 @@
       content="Груминг салон. Стрижка мелких и средних пород собак, котов в Солигорске. Дог Хаус"
     />
     <script
+      defer
+      src="https://unpkg.com/img-comparison-slider@7/dist/index.js"
+    ></script>
+    <script
       type="text/javascript"
       charset="utf-8"
       async
       src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae9290e279b7953518c4347ae10ef5d4c2b4825d3b88a2c2305c7849112bc8c43&amp;width=100%&amp;height=100%&amp;id=mymap&amp;lang=ru_RU&amp;scroll=true"
-    ></script>
+    >
+      ymaps.ready({
+       // successCallback будет вызван, когда загрузятся API и модуль "myModule1".
+      require: ['myModule1'],
+      successCallback: function (ym) {
+          var map = new ymaps.Map('map', {
+              center: [55.7, 37.6],
+              zoom: 10
+          });
+          var obj = new ymaps.myModule1();
+          // ...
+      }})
+    </script>
   </head>
   <body class="mat-typography">
     <app-root></app-root>

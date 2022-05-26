@@ -229,7 +229,6 @@
                 margin: 40px 0;
                 color: #787878;
                 font-size: 16px;
-                font-style: italic;
                 font-family: 'Lato', sans-serif;
               }
 
@@ -377,6 +376,9 @@
   }
 
   @media (max-width:490px) {
+    .main-section {
+      height: 600px !important;
+    }
 
     .upper-section {
       margin-top: 0 !important;

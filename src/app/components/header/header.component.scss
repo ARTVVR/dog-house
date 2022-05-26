@@ -329,6 +329,9 @@ $main-color: #c77847;
 }
 
 @media (max-width: 520px) {
+  .burger-main-content {
+    margin-top: 82px !important;
+  }
 
   .logo-block {
     width: 100% !important;

@@ -1,0 +1,43 @@
+.main {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 120px;
+  padding: 40px 20px;
+
+  .title-block {
+    margin: 50px 0 100px 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+      margin: 0;
+      font-size: 48px;
+      font-family: 'Comfortaa', cursive;
+    }
+  }
+
+  .link-block {
+    font-size: 16px;
+
+    .instagram-link {
+      color: #c77847;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+
+  .main {
+    margin-top: 60px !important;
+  }
+
+  .title-block {
+    margin: 0 0 50px 0 !important;
+  }
+
+  .title {
+    font-size: 30px !important;
+  }
+}
