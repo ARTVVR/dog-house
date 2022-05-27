@@ -29,6 +29,7 @@
     "img-comparison-slider": "^7.6.0",
     "mdb-ui-kit": "^4.1.0",
     "rxjs": "~7.5.0",
+    "wow.js": "^1.2.2",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

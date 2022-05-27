@@ -13,9 +13,9 @@ import MaterialModule from './material/material.module';
 import HeaderComponent from './components/header/header.component';
 import FooterComponent from './components/footer/footer.component';
 import MainComponent from './components/main/main.component';
-import CotactsPageComponent from './components/cotacts-page/cotacts-page.component';
 import GalleryPageComponent from './components/gallery-page/gallery-page.component';
 import AboutUsPageComponent from './components/about-us-page/about-us-page.component';
+import ServicesPageComponent from './components/services-page/services-page.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import AboutUsPageComponent from './components/about-us-page/about-us-page.compo
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    CotactsPageComponent,
+    ServicesPageComponent,
     GalleryPageComponent,
     AboutUsPageComponent,
   ],

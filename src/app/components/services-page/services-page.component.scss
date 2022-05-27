@@ -1,0 +1,257 @@
+.main {
+  margin-top: 120px;
+  width: 100vw;
+
+  .upper-section {
+    min-height: 670px;
+    background: url(../../../assets/jpg/background/teahub.io-black-and-white-dog-837493.jpg);
+    background-size: cover;
+    background-position-x: right;
+    background-repeat: no-repeat;
+
+    .container {
+      position: relative;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      min-height: 670px;
+
+      .left-side-block {
+        margin-top: 100px;
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .title-block {
+          position: relative;
+
+          .title {
+            font-size: 46px;
+            font-family: 'Comfortaa', cursive;
+            line-height: 60px;
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            height: 3px;
+            width: 100%;
+            background: #42433e;
+            border-radius: 30%;
+          }
+        }
+
+        .info-block {
+          margin-top: 50px;
+
+          .info-content {
+            font-size: 16px;
+            line-height: 30px;
+            font-family: 'Lato', sans-serif;
+            color: #787878;
+          }
+        }
+
+        .link-more {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  .services {
+    min-height: 470px;
+    background: #010101;
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+
+    .container {
+      position: relative;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .left-side-block {
+        max-width: 40%;
+        min-width: 500px;
+        margin-right: 50px;
+
+        .img-slide {
+          width: 100%;
+          height: auto;
+          border-radius: 4px;
+        }
+
+        .description-block {
+          margin-top: 50px;
+
+          .description {
+            font-size: 18px;
+            color: #b9b9b9;
+            line-height: 35px;
+
+            strong {
+              color: #ff9800;
+            }
+          }
+        }
+      }
+
+      .right-side-block {
+        width: 48%;
+        height: 100%;
+
+        .panel {
+          width: 100%;
+          box-shadow: 3px 3px 4px #676767;
+          border-radius: 4px;
+          margin: 20px 0;
+
+          &:nth-child(1) {
+            margin: 0;
+          }
+
+          .mat-expansion-panel {
+            background-color: #cfd8d8;
+
+            .card-description {
+              font-family: "Lato", sans-serif;
+              color: #787878;
+            }
+
+            .card-icons {
+              margin-right: 20px;
+              width: 30px;
+              height: 30px;
+            }
+
+            ::ng-deep {
+
+              .mat-expansion-panel,
+              .mat-expansion-panel-header {
+                background-color: #cfd8d8;
+              }
+
+              .mat-expansion-panel-header-title {
+                font-size: 26px;
+                font-family: 'Comfortaa', cursive;
+                min-height: 50px;
+                line-height: 35px;
+              }
+
+              mat-expansion-panel-header {
+                height: 100px;
+              }
+            }
+
+            .tab-block {
+              padding: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:1098px) {
+  .img-slide {
+    width: 50% !important;
+  }
+
+  .right-side-block {
+    width: 100% !important;
+    margin-top: 50px !important;
+  }
+
+  .description-block {
+    margin-top: 0 !important;
+    max-width: 46% !important;
+
+    .description {
+      font-size: 14px !important;
+    }
+  }
+
+  .left-side-block {
+    max-width: 100% !important;
+    margin-right: 0 !important;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container:nth-child(1) {
+    backdrop-filter: blur(15px);
+  }
+
+  .upper-section {
+    background-position-x: center !important;
+  }
+}
+
+@media (max-width: 521px) {
+  ::ng-deep {
+    .mat-expansion-panel-header-title {
+      font-size: 20px !important;
+      line-height: 25px !important;
+    }
+
+    mat-expansion-panel-header {
+      height: 60px !important;
+    }
+  }
+
+  .description-block {
+    margin-top: 40px !important;
+    max-width: 100% !important;
+  }
+
+  .img-slide {
+    width: 100% !important;
+  }
+
+  .left-side-block {
+    flex-wrap: wrap;
+    min-width: 0 !important;
+  }
+
+  .main {
+    margin-top: 60px !important;
+  }
+
+  .container,
+  .upper-section {
+    min-height: 570px !important;
+  }
+
+  .left-side-block {
+    margin-top: 0 !important;
+  }
+
+  .title {
+    font-size: 28px !important;
+    font-weight: bold !important;
+  }
+
+  .info-content {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .mat-expansion-panel-header-title {
+    font-size: 18px !important;
+  }
+
+  .card-description {
+    font-size: 13px !important;
+  }
+}

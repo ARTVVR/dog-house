@@ -37,6 +37,16 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <meta
       name="description"
       content="Груминг салон. Стрижка мелких и средних пород собак, котов в Солигорске. Дог Хаус"
@@ -46,22 +56,17 @@
       src="https://unpkg.com/img-comparison-slider@7/dist/index.js"
     ></script>
     <script
-      type="text/javascript"
-      charset="utf-8"
       async
       src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae9290e279b7953518c4347ae10ef5d4c2b4825d3b88a2c2305c7849112bc8c43&amp;width=100%&amp;height=100%&amp;id=mymap&amp;lang=ru_RU&amp;scroll=true"
-    >
-      ymaps.ready({
-       // successCallback будет вызван, когда загрузятся API и модуль "myModule1".
-      require: ['myModule1'],
-      successCallback: function (ym) {
-          var map = new ymaps.Map('map', {
-              center: [55.7, 37.6],
-              zoom: 10
-          });
-          var obj = new ymaps.myModule1();
-          // ...
-      }})
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+      integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      new WOW({ mobile: false }).init();
     </script>
   </head>
   <body class="mat-typography">

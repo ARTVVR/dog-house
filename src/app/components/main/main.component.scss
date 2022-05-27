@@ -256,7 +256,6 @@
               }
             }
 
-
             .photo-dog {
               max-width: 26vw;
               height: auto;
@@ -282,12 +281,19 @@
         align-items: center;
         justify-content: space-between;
 
-        .photo-img {
-          max-width: 30vw;
-          min-width: 200px;
+        .salon-photos {
+          max-width: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
 
-          height: auto;
-          margin: 5px;
+          .photo-img {
+            max-width: 25vw;
+            min-width: 150px;
+
+            height: auto;
+            margin: 5px;
+          }
         }
       }
     }
@@ -338,6 +344,22 @@
     }
   }
 
+  @media (max-width: 700px) {
+
+    .gallery-box {
+      flex-wrap: wrap;
+
+      .salon-photos {
+        max-width: 100% !important;
+
+        .photo-img {
+          max-width: 50vw !important;
+          min-width: 90px !important;
+        }
+      }
+    }
+  }
+
   @media (max-width:750px) {
 
     .story-description {
@@ -347,15 +369,6 @@
 
     .left-side-upper-block {
       width: 100% !important;
-    }
-
-    .gallery-box {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .photo-img {
-      max-width: 100% !important;
     }
 
     .story-title,
@@ -398,7 +411,6 @@
     }
 
     .photo-dog {
-      // max-width: 100% !important;
       min-width: 240px !important;
     }
 

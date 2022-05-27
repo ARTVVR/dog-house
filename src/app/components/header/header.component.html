@@ -1,12 +1,12 @@
 <header class="header">
   <div class="header-container">
     <div class="up-header">
-      <a
-        href="#main-section"
-        routerLink="/"
-        class="logo-block burger-logo-block"
-      >
-        <mat-icon class="title-logo">pets</mat-icon>
+      <a routerLink="/." class="logo-block burger-logo-block">
+        <img
+          class="title-logo logo"
+          src="../../../assets/favicon/My-project.png"
+          alt="Dog House Logo"
+        />
         <span class="title-logo log" (click)="isVisibleBurger = false">
           Дог Хаус
         </span>
@@ -59,28 +59,28 @@
             routerLinkActive="active-link"
             [routerLinkActiveOptions]="{ exact: true }"
             routerLink=""
-            mat-stroked-button
+            mat-button
           >
             <li>Главная</li>
           </button>
           <button
             routerLinkActive="active-link"
-            routerLink="/contacts"
-            mat-stroked-button
+            routerLink="/services"
+            mat-button
           >
-            <li>Контакты</li>
+            <li>Услуги</li>
           </button>
           <button
             routerLinkActive="active-link"
             routerLink="/gallery"
-            mat-stroked-button
+            mat-button
           >
             <li>Галерея</li>
           </button>
           <button
             routerLinkActive="active-link"
             routerLink="/about-us"
-            mat-stroked-button
+            mat-button
           >
             <li>О нас</li>
           </button>
@@ -111,7 +111,11 @@
 <div class="burger-container" *ngIf="isVisibleBurger">
   <div routerLink="/" (click)="isVisibleBurger = false" class="logo-block">
     <div>
-      <mat-icon class="title-logo">pets</mat-icon>
+      <img
+        class="title-logo logo"
+        src="../../../assets/favicon/My-project.png"
+        alt="Dog House Logo"
+      />
       <span class="title-logo log"> Дог Хаус </span>
     </div>
     <button class="close-btn" (click)="isVisibleBurger = false" mat-button>
@@ -138,12 +142,12 @@
         </button>
         <button
           (click)="isVisibleBurger = false"
-          routerLink="/contacts"
+          routerLink="/services"
           routerLinkActive="active-link"
           mat-stroked-button
           class="btn-link-burger"
         >
-          <li>Контакты</li>
+          <li>Услуги</li>
         </button>
         <button
           (click)="isVisibleBurger = false"
