@@ -25,6 +25,7 @@
     "@ngxs/devtools-plugin": "^3.7.3",
     "@ngxs/store": "^3.7.3",
     "angular-bootstrap-md": "^13.0.0",
+    "angular8-yandex-maps": "^13.2.0",
     "bootstrap-icons": "^1.8.2",
     "img-comparison-slider": "^7.6.0",
     "mdb-ui-kit": "^4.1.0",

@@ -1,15 +1,17 @@
-<section class="map-section">
-  <div class="map-container" id="mymap"></div>
+<section class="map-section" id="map-container">
+  <div class="map-container">
+    <ya-map *ngIf="isVisible" [center]="[52.786329, 27.521166]" [zoom]="16">
+      <ya-placemark [geometry]="[52.786329, 27.521166]"></ya-placemark>
+    </ya-map>
+  </div>
 </section>
 <footer class="text-white text-left text-lg-start bg-dark">
   <div class="container p-4">
     <div class="row mt-4">
       <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
         <h5 class="text-uppercase mb-4">О нас</h5>
-        <p>
-          Ваш питомец в надежных руках нашей команды профессиональных грумеров.
-        </p>
-        <p>Мы предлагаем только качественный сервис.</p>
+        <p>Ваш питомец в надежных руках наших высококлассных грумеров.</p>
+        <p>Мы предлагаем исключительно высококачественный сервис.</p>
       </div>
       <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
         <h5 class="text-uppercase mb-4 pb-1">Контактная информация</h5>

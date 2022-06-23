@@ -16,18 +16,18 @@ export default class ServicesPageComponent {
 
   public currentOpenedItemId: number = INITIAL_NUMBER;
 
-  public imgUrl: string = `${URL_PHOTO_SERVICES}${this.currentOpenedItemId}.jpg`;
+  public imgUrl: string = `${URL_PHOTO_SERVICES}${this.currentOpenedItemId}-uslugi-dlya-sobak-i-koshek-v-soligorske-dog-haus.jpg`;
 
   public cards: IDataServices[] = dataCards;
 
   public handleOpened(item: IDataServices): void {
     this.currentOpenedItemId = item.id;
-    this.imgUrl = `${URL_PHOTO_SERVICES}${this.currentOpenedItemId}.jpg`;
+    this.imgUrl = `${URL_PHOTO_SERVICES}${this.currentOpenedItemId}-uslugi-dlya-sobak-i-koshek-v-soligorske-dog-haus.jpg`;
   }
 
   public handleClosed(item: IDataServices): void {
     if (this.currentOpenedItemId === item.id) {
-      this.imgUrl = `${URL_PHOTO_SERVICES}${INITIAL_NUMBER}.jpg`;
+      this.imgUrl = `${URL_PHOTO_SERVICES}${INITIAL_NUMBER}-uslugi-dlya-sobak-i-koshek-v-soligorske-dog-haus.jpg`;
     }
   }
 }

@@ -8,7 +8,7 @@
     .main-section {
       width: 100vw;
       height: 791px;
-      background: url(../../../assets/jpg/background/dog-ace.jpg);
+      background: url(../../../assets/jpg/background/zadnij-fon-jork-soligorsk-dog-haus.webp);
       background-size: cover;
       background-position-x: right;
       background-repeat: no-repeat;
@@ -288,11 +288,15 @@
           justify-content: space-between;
 
           .photo-img {
-            max-width: 25vw;
+            width: 49%;
+            height: auto;
             min-width: 150px;
 
-            height: auto;
-            margin: 5px;
+            margin: 1%;
+          }
+
+          &:nth-child(2) {
+            margin-left: 1%;
           }
         }
       }
@@ -353,8 +357,12 @@
         max-width: 100% !important;
 
         .photo-img {
-          max-width: 50vw !important;
-          min-width: 90px !important;
+          width: 100% !important;
+          min-width: 100px !important;
+        }
+
+        &:nth-child(2) {
+          margin-left: 0 !important;
         }
       }
     }

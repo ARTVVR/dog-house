@@ -54,20 +54,28 @@ $main-color: #e47632;
           font-size: 25px !important;
         }
 
-        .title-logo {
-          font-weight: bold;
-          font-style: italic;
-          font-size: 19px;
-          color: $main-color;
-        }
+        .logo-left-block {
+          width: 160px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
 
-        .logo {
-          width: 40px;
-          height: 40px;
-        }
+          .title-logo {
+            font-weight: bold;
+            font-style: italic;
+            font-size: 19px;
+            color: $main-color;
+            width: 40px;
+            height: 40px;
+          }
 
-        .log {
-          margin-left: 20px;
+          .title-name-logo {
+            font-weight: bold;
+            font-style: italic;
+            font-size: 19px;
+            color: $main-color;
+          }
         }
       }
 
@@ -185,21 +193,7 @@ $main-color: #e47632;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-
-    div {
-      width: 160px;
-      display: flex;
-      align-items: center;
-
-      .logo {
-        width: 40px;
-        height: 40px;
-      }
-
-      .log {
-        margin-left: 20px;
-      }
-    }
+    width: 160px;
 
     .close-btn {
       display: none;
@@ -221,12 +215,28 @@ $main-color: #e47632;
       font-size: 25px !important;
     }
 
-    .title-logo {
-      font-weight: bold;
-      text-align: center;
-      font-style: italic;
-      font-size: 19px;
-      color: $main-color;
+    .logo-left-block {
+      width: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .title-logo {
+        font-weight: bold;
+        text-align: center;
+        font-style: italic;
+        font-size: 19px;
+        color: $main-color;
+        width: 40px;
+        height: 40px;
+      }
+
+      .title-name-logo {
+        font-weight: bold;
+        font-style: italic;
+        font-size: 19px;
+        color: $main-color;
+      }
     }
   }
 
@@ -346,11 +356,6 @@ $main-color: #e47632;
   .logo-block {
     width: 100% !important;
     justify-content: space-between !important;
-  }
-
-  .burger-logo-block {
-    display: flex !important;
-    justify-content: flex-start !important;
   }
 
   .close-btn {

@@ -2,14 +2,16 @@
   <div class="header-container">
     <div class="up-header">
       <a routerLink="/." class="logo-block burger-logo-block">
-        <img
-          class="title-logo logo"
-          src="../../../assets/favicon/My-project.png"
-          alt="Dog House Logo"
-        />
-        <span class="title-logo log" (click)="isVisibleBurger = false">
-          Дог Хаус
-        </span>
+        <div class="logo-left-block">
+          <img
+            class="title-logo"
+            src="../../../assets/favicon/logo-dog-haus-soligorsk.png"
+            alt="Dog House Logo"
+          />
+          <span class="title-name-logo" (click)="isVisibleBurger = false">
+            Дог Хаус
+          </span>
+        </div>
       </a>
       <div class="information-content">
         <button matTooltip="время работы" class="social-networks" mat-button>
@@ -27,7 +29,7 @@
           <button matTooltip="инстаграм" class="social-networks" mat-button>
             <img
               class="instagramm-icon"
-              src="../../../assets/png/instagram.png"
+              src="../../../assets/png/instagram-dog-haus-dog-house-soligorsk-strizhka-sobak.png"
               alt="instagram"
             />
           </button>
@@ -109,14 +111,18 @@
 </header>
 
 <div class="burger-container" *ngIf="isVisibleBurger">
-  <div routerLink="/" (click)="isVisibleBurger = false" class="logo-block">
-    <div>
+  <div class="logo-block">
+    <div
+      routerLink="/"
+      (click)="isVisibleBurger = false"
+      class="logo-left-block"
+    >
       <img
-        class="title-logo logo"
-        src="../../../assets/favicon/My-project.png"
+        class="title-logo"
+        src="../../../assets/favicon/logo-dog-haus-soligorsk.png"
         alt="Dog House Logo"
       />
-      <span class="title-logo log"> Дог Хаус </span>
+      <span class="title-name-logo"> Дог Хаус </span>
     </div>
     <button class="close-btn" (click)="isVisibleBurger = false" mat-button>
       <mat-icon>close</mat-icon>
@@ -196,7 +202,7 @@
           >
             <img
               class="instagram-burger-icon"
-              src="../../../assets/png/instagram.png"
+              src="../../../assets/png/instagram-dog-haus-dog-house-soligorsk-strizhka-sobak.png"
               alt="instagram"
             />
             <span class="networks-burger-info">@dog.house.sol</span>
