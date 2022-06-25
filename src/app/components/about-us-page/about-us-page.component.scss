@@ -1,9 +1,243 @@
 .main {
-  margin-top: 120px;
   width: 100vw;
 
+  @media (max-width: 520px) {
+    margin-top: 60px;
+  }
+
+  .doh-house-section {
+    position: relative;
+    background-image: url(../../../assets/jpg/background/zadnij-seriy-fon-soligorsk-dog-haus.jpg);
+    min-height: 791px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (max-width: 521px) {
+      min-height: 500px;
+    }
+
+    .upper-container {
+      position: relative;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 120px 20px;
+      min-height: 791px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media (max-width: 1080px) {
+        flex-wrap: wrap;
+
+        .left {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 521px) {
+        padding: 20px;
+        min-height: 520px;
+      }
+
+      .box-block {
+        margin-top: 100px;
+        max-width: 49%;
+        height: auto;
+
+        @media (max-width: 1080px) {
+          max-width: 100%;
+          width: 100%;
+        }
+
+        @media (max-width: 800px) {
+          &:nth-child(1) {
+            margin-top: 0px;
+          }
+        }
+
+        @media (max-width: 521px) {
+          margin-top: 20px;
+        }
+
+        .example-card {
+          width: 500px;
+
+          @media (max-width: 1080px) {
+            width: 100%;
+          }
+        }
+
+        .stars-block {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          max-width: 28%;
+
+          .rating {
+            font-size: 16px;
+            margin-right: 5px;
+
+            @media (max-width: 420px) {
+              font-size: 13px;
+            }
+          }
+
+          .star {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fdd663;
+            margin-bottom: 1px;
+
+            &:nth-child(1) {
+              margin-left: 0;
+            }
+
+            @media (max-width: 420px) {
+              font-size: 13px;
+            }
+          }
+        }
+
+        .list-content {
+          margin-top: 5px;
+          padding: 10px 0;
+          border-top: 1px solid rgb(121, 121, 121);
+
+          .box-info {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .li {
+              cursor: pointer;
+              font-weight: 500;
+              font-size: 16px;
+              transition: .1s;
+
+              &:hover {
+                text-decoration: underline;
+                transition: .1s;
+              }
+
+              @media (max-width: 420px) {
+                font-size: 14px;
+              }
+
+            }
+          }
+        }
+
+        .btns-block {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .link-btn {
+            padding: 10px;
+
+            @media (max-width: 420px) {
+              padding: 0px;
+            }
+
+            .icons {
+              width: 40px;
+              height: 40px;
+
+              @media (max-width: 420px) {
+                width: 25px !important;
+                height: 25px !important;
+              }
+            }
+          }
+        }
+
+        .title {
+          max-width: 600px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-family: 'Cormorant Garamond', serif;
+          -moz-user-select: none;
+          -khtml-user-select: none;
+          user-select: none;
+
+          @media (max-width: 800px) {
+            font-size: 20px;
+          }
+
+          .first-name {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-self: center;
+            font-size: 250px;
+            height: 200px;
+
+            &:after {
+              content: '';
+              position: absolute;
+              top: 20%;
+              left: 38%;
+              width: 120px;
+              height: 120px;
+              border-radius: 50%;
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-image: url(../../../assets/favicon/logo-dog-haus-soligorsk.png);
+            }
+
+            @media (max-width: 800px) {
+              font-size: 180px;
+
+              &:after {
+                top: 30%;
+                left: 39%;
+                width: 80px;
+                height: 80px;
+              }
+            }
+
+            @media (max-width: 420px) {
+              font-size: 140px;
+              height: 100px;
+
+              &:after {
+                top: 20%;
+                left: 39%;
+                width: 64px;
+                height: 64px;
+              }
+            }
+          }
+
+          .second-name {
+            margin-top: 20px;
+            font-size: 80px;
+
+            @media (max-width: 800px) {
+              font-size: 50px;
+              margin-top: 0px;
+            }
+
+            @media (max-width: 420px) {
+              font-size: 40px;
+              margin-top: 0px;
+            }
+
+          }
+        }
+      }
+    }
+  }
+
   .upper-section {
-    min-height: 670px;
+    min-height: 650px;
     background-size: cover;
     background-position-x: right;
     background-repeat: no-repeat;
@@ -22,10 +256,22 @@
         align-items: center;
         margin: 30px 0;
 
+        @media (max-width: 670px) {
+          justify-content: center;
+
+          &::after {
+            border-radius: 40%;
+          }
+        }
+
         .upper-title {
           font-size: 42px;
           font-family: 'Comfortaa', cursive;
           font-weight: bold;
+
+          @media (max-width: 800px) {
+            font-size: 32px;
+          }
         }
 
         &::after {
@@ -43,6 +289,12 @@
         display: flex;
         justify-content: flex-start;
 
+        @media (max-width: 670px) {
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
         .photo-block {
           max-width: 25%;
           min-width: 300px;
@@ -52,29 +304,18 @@
             border-radius: 4px;
             height: auto;
           }
-
-          .social-links {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            margin-top: 10px;
-
-            .link {
-              width: 32px;
-              height: 32px;
-
-              img {
-                width: 100%;
-                height: 100%;
-              }
-            }
-          }
         }
 
         .right-side-block {
           position: relative;
           max-width: 70%;
           margin-left: 5%;
+
+          @media (max-width: 670px) {
+            margin-top: 20px;
+            max-width: 100%;
+            margin-left: 0;
+          }
 
           .title {
             font-size: 22px;
@@ -91,6 +332,14 @@
             justify-content: space-between;
             flex-direction: column;
             flex-wrap: wrap;
+
+            @media (max-width: 800px) {
+              font-size: 12px;
+            }
+
+            @media (max-width: 670px) {
+              font-size: 13px;
+            }
           }
 
           .certificates-block {
@@ -98,9 +347,24 @@
             display: flex;
             justify-content: space-between;
 
+            @media (max-width: 670px) {
+              margin-top: 20px;
+              flex-wrap: wrap;
+            }
+
             .photo-certificate {
-              max-height: 18.8vw;
+              border-radius: 5px;
+              max-height: 15.8vw;
               min-height: 120px;
+
+              @media (max-width: 670px) {
+                max-height: 28.8vw;
+                min-height: 120px;
+
+                &:nth-child(2) {
+                  margin-left: 20px;
+                }
+              }
             }
 
             .first {
@@ -117,77 +381,30 @@
   }
 }
 
-@media (max-width: 800px) {
-  .title {
-    font-size: 20px !important;
-  }
-
-  .upper-title {
-    font-size: 32px !important;
-  }
-
-  .description-block {
-    font-size: 12px !important;
-  }
-}
-
 @media (max-width: 670px) {
-
-  .link {
-    width: 24px !important;
-    height: 24px !important;
-  }
-
-  .div-upper-title-block {
-    justify-content: center !important;
-
-    &::after {
-      border-radius: 40% !important;
-    }
-  }
-
-  .description-block {
-    font-size: 13px !important;
-  }
-
-  .photo-certificate {
-    max-height: 28.8vw !important;
-    min-height: 120px !important;
-
-    &:nth-child(2) {
-      margin-left: 20px !important;
-    }
-  }
-
-  .main-content {
-    align-items: center;
-    justify-content: center !important;
-  }
-
-  .main-content {
-    flex-wrap: wrap;
-  }
-
   .title-block {
     display: flex;
     align-items: center;
-    justify-content: center !important;
-  }
-
-  .right-side-block {
-    margin-top: 20px;
-    max-width: 100% !important;
-    margin-left: 0 !important;
-  }
-
-  .certificates-block {
-    margin-top: 20px;
-    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
-@media (max-width: 520px) {
-  .main {
-    margin-top: 60px !important;
+@media (max-width: 420px) {
+  .box-block:nth-child(1) {
+    margin-top: 50px;
+  }
+
+  ::ng-deep {
+    .mat-card-subtitle {
+      font-size: 12px;
+    }
+
+    .mat-card-title {
+      font-size: 20px;
+    }
+  }
+
+  .li-info {
+    font-size: 12px;
   }
 }

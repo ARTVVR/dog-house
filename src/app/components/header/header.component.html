@@ -1,4 +1,4 @@
-<header class="header">
+<header id="header" class="header">
   <div class="header-container">
     <div class="up-header">
       <a routerLink="/." class="logo-block burger-logo-block">
@@ -14,19 +14,34 @@
         </div>
       </a>
       <div class="information-content">
-        <button matTooltip="время работы" class="social-networks" mat-button>
+        <button
+          matTooltip="время работы"
+          aria-label="Work Time Dog House"
+          class="social-networks"
+          mat-button
+        >
           <mat-icon>schedule</mat-icon>
         </button>
         <span class="networks-info">Пн. — Сб. 10:00–20:00</span>
         <a href="tel: +375 29 118-16-36">
-          <button matTooltip="телефон" class="social-networks" mat-button>
+          <button
+            matTooltip="телефон"
+            class="social-networks"
+            aria-label="Phone Dog House"
+            mat-button
+          >
             <mat-icon>phone</mat-icon>
           </button>
         </a>
         <span class="networks-info">+375 29 118-16-36</span>
 
         <a target="_blank" href="https://www.instagram.com/dog.house.sol/">
-          <button matTooltip="инстаграм" class="social-networks" mat-button>
+          <button
+            aria-label="Instagram Dog House"
+            matTooltip="инстаграм"
+            class="social-networks"
+            mat-button
+          >
             <img
               class="instagramm-icon"
               src="../../../assets/png/instagram-dog-haus-dog-house-soligorsk-strizhka-sobak.png"
@@ -39,12 +54,18 @@
           target="_blank"
           href="https://www.google.com/maps/place/%D0%94%D0%BE%D0%B3+%D0%A5%D0%B0%D1%83%D1%81/@52.7857833,27.5211671,15z/data=!4m5!3m4!1s0x0:0x451577b1547ed00f!8m2!3d52.7857833!4d27.5211671"
         >
-          <button matTooltip="адрес" class="social-networks" mat-button>
+          <button
+            aria-label="Location Dog House"
+            matTooltip="адрес"
+            class="social-networks"
+            mat-button
+          >
             <mat-icon>location_on</mat-icon>
           </button>
         </a>
         <span class="networks-info">Ул. Константина Заслонова 49</span>
         <button
+          aria-label="Burger Menu Dog House"
           #burger
           (click)="isVisibleBurger = true"
           class="upper-burger"
@@ -100,6 +121,7 @@
       </span>
       <button
         #burger
+        aria-label="Burger Menu Dog House"
         (click)="isVisibleBurger = true"
         class="burger-menu"
         mat-button

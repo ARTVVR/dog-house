@@ -1,8 +1,19 @@
 <section class="map-section" id="map-container">
   <div class="map-container">
-    <ya-map *ngIf="isVisible" [center]="[52.786329, 27.521166]" [zoom]="16">
+    <ya-map
+      (ready)="removeLoading()"
+      *ngIf="isVisible"
+      [center]="[52.786329, 27.521166]"
+      [zoom]="15"
+    >
       <ya-placemark [geometry]="[52.786329, 27.521166]"></ya-placemark>
     </ya-map>
+    <div *ngIf="isLoading" class="loading-container">
+      <mat-spinner
+        aria-label="Progress Spinner Dog House"
+        [diameter]="progressDiameter"
+      ></mat-spinner>
+    </div>
   </div>
 </section>
 <footer class="text-white text-left text-lg-start bg-dark">
@@ -27,7 +38,7 @@
             class="mb-3"
           >
             <mat-icon class="mat-icon">location_city</mat-icon>
-            <span class="ms-2"> г. Солигорск, Беларусь</span>
+            <span class="ms-2"> <strong> г. Солигорск, Беларусь</strong></span>
           </a>
           <a
             target="_blank"

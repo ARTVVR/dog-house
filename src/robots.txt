@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Host: dog-house.by
+Sitemap: http://dog-house.by/sitemap.xml

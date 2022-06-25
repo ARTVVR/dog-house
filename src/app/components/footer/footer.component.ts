@@ -8,7 +8,11 @@ import { AfterViewInit, Component } from '@angular/core';
 export default class FooterComponent implements AfterViewInit {
   public isVisible: boolean = false;
 
-  ngAfterViewInit() {
+  public isLoading: boolean = true;
+
+  public progressDiameter: number = window.innerWidth <= 700 ? 50 : 80;
+
+  ngAfterViewInit(): void {
     const elem: HTMLElement | null = document.getElementById('map-container');
 
     const showMap = () => {
@@ -26,5 +30,9 @@ export default class FooterComponent implements AfterViewInit {
       }
     }
     document.addEventListener('scroll', onScroll);
+  }
+
+  public removeLoading(): void {
+    this.isLoading = false;
   }
 }
