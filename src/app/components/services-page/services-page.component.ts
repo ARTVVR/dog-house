@@ -12,21 +12,21 @@ import IDataServices from 'src/app/interfaces/interfaces';
   styleUrls: ['./services-page.component.scss'],
 })
 export default class ServicesPageComponent {
-  public panelOpenState: boolean = false;
+  public panelOpenState = false;
 
-  public currentOpenedItemId: number = INITIAL_NUMBER;
+  public currentOpenedItemId = INITIAL_NUMBER;
 
-  public imgUrl: string = `${URL_PHOTO_SERVICES}${this.currentOpenedItemId}-uslugi-dlya-sobak-i-koshek-v-soligorske-dog-haus.jpg`;
+  public imgUrl = `${URL_PHOTO_SERVICES}${this.currentOpenedItemId}-uslugi-dlya-sobak-i-koshek-v-soligorske-dog-haus.jpg`;
 
-  public cards: IDataServices[] = dataCards;
+  public cards = dataCards;
 
-  public handleOpened(item: IDataServices): void {
-    this.currentOpenedItemId = item.id;
+  public handleOpened({ id }: IDataServices): void {
+    this.currentOpenedItemId = id;
     this.imgUrl = `${URL_PHOTO_SERVICES}${this.currentOpenedItemId}-uslugi-dlya-sobak-i-koshek-v-soligorske-dog-haus.jpg`;
   }
 
-  public handleClosed(item: IDataServices): void {
-    if (this.currentOpenedItemId === item.id) {
+  public handleClosed({ id }: IDataServices): void {
+    if (this.currentOpenedItemId === id) {
       this.imgUrl = `${URL_PHOTO_SERVICES}${INITIAL_NUMBER}-uslugi-dlya-sobak-i-koshek-v-soligorske-dog-haus.jpg`;
     }
   }

@@ -8,8 +8,13 @@
     {
       "files": ["*.ts"],
       "parserOptions": {
-        "project": ["tsconfig.json"],
-        "createDefaultProgram": true
+        "sourceType": "module",
+        "project": ["tsconfig.json"]
+      },
+      "ecmaFeatures": {
+        "modules": true,
+        "spread" : true,
+        "restParams" : true
       },
       "extends": [
         "plugin:@angular-eslint/recommended",
