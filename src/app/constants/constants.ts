@@ -2,6 +2,8 @@ import IDataServices from '../interfaces/interfaces';
 
 export const URL_PHOTO_SERVICES = '../../../assets/jpg/services-photo/';
 
+export const DATADABE_ZOO_PRODUKT = '../../../assets/zoo-towari.xlsx';
+
 export const INITIAL_NUMBER = 0;
 
 export const dataCards: IDataServices[] = [

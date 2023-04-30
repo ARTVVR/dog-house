@@ -40,8 +40,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
-import { DragDropModule } from '@angular/cdk/drag-drop';
-import { TextFieldModule } from '@angular/cdk/text-field';
 import { WavesModule, ButtonsModule, IconsModule } from 'angular-bootstrap-md';
 
 const MaterialComponents = [
@@ -84,8 +82,6 @@ const MaterialComponents = [
   MatPaginatorModule,
   MatSortModule,
   MatTableModule,
-  DragDropModule,
-  TextFieldModule,
 ];
 
 @NgModule({

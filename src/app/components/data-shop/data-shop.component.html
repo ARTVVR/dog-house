@@ -1,0 +1,43 @@
+<section class="main">
+  <div class="section-shop-container">
+    <div class="left-side-menu">
+      <ul>
+        <li *ngFor="let item of items; let i = index">
+          <button
+            class="select-btn"
+            mat-flat-button
+            color="primary"
+            (click)="id_section = i; selectProduct()"
+          >
+            {{ item }}
+          </button>
+        </li>
+      </ul>
+      <mat-paginator
+        class="paginator"
+        [length]="dataBaseLength.length - 1"
+        [pageSize]="pageSize"
+        [pageIndex]="currentPage"
+        (page)="onPageChange($event)"
+      >
+      </mat-paginator>
+    </div>
+
+    <div class="product-container">
+      <div class="product-block" *ngFor="let data of dataBase.slice(1)">
+        <img
+          class="picture-product"
+          [src]="getImgPath(data[2])"
+          alt="{{ data[2] }}"
+        />
+        <div class="bottom-block">
+          <div class="description-block">{{ data[1] }}</div>
+          <div class="cost-block">
+            <span>Цена</span>
+            <span>{{ aroundCost(data[6]) }} р.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

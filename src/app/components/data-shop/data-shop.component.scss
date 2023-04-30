@@ -1,0 +1,130 @@
+.main {
+  margin-top: 109px;
+  width: 100vw;
+  background-color: black;
+  padding: 20px 0;
+
+  .section-shop-container {
+    max-width: 1440px;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    display: flex;
+    max-height: 100%;
+
+    .left-side-menu {
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: rgb(0, 0, 0);
+      padding: 0 10px;
+
+      .select-btn {
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+
+      .paginator {
+        border-radius: 5px;
+      }
+    }
+
+    .product-container {
+      position: relative;
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .product-block {
+        cursor: pointer;
+        border-radius: 10px;
+        border: 0.5px solid rgb(161, 161, 161);
+        flex-basis: 31%;
+        margin: 5px;
+        height: 320px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .description-block {
+          margin-top: 10px
+        }
+
+        .cost-block {
+          margin-top: 10px;
+          font-size: 16px;
+          font-weight: bold;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .picture-product {
+          max-height: 70%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .product-container {
+    justify-content: space-between !important;
+  }
+
+  .product-block {
+    flex-basis: 44% !important;
+    max-height: 70% !important;
+  }
+
+  .picture-product {
+    max-height: 60% !important;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .left-side-menu {
+    width: 30% !important;
+  }
+
+  .bottom-block {
+    height: 80%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .product-block {
+    padding: 5px !important;
+    flex-basis: 99% !important;
+    flex-direction: row !important;
+    height: 160px !important;
+  }
+
+  .picture-product {
+    max-height: 100% !important;
+  }
+
+  .description-block {
+    font-size: 11px !important;
+  }
+
+  .cost-block {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .main {
+    margin-top: 60px;
+  }
+}
