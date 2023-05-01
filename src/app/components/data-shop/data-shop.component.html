@@ -1,4 +1,7 @@
 <section class="main">
+  <div class="section-title">
+    <h1 class="title">Зоотовары для собак и кошек</h1>
+  </div>
   <div class="section-shop-container">
     <div class="left-side-menu">
       <ul>
@@ -8,30 +11,46 @@
             mat-flat-button
             color="primary"
             (click)="id_section = i; selectProduct()"
+            [ngClass]="{ active: id_section === i }"
           >
             {{ item }}
           </button>
         </li>
       </ul>
-      <mat-paginator
-        class="paginator"
-        [length]="dataBaseLength.length - 1"
-        [pageSize]="pageSize"
-        [pageIndex]="currentPage"
-        (page)="onPageChange($event)"
-      >
-      </mat-paginator>
-    </div>
+      <div class="paginator">
+        <mat-icon class="inv">inventory</mat-icon>
+        <span>{{ dataBaseLength.length }}</span>
+        <button
+          class="btn-arrow"
+          mat-raised-button
+          (click)="prevPage()"
+          [disabled]="currentPage === 0"
+        >
+          <mat-icon>arrow_back_ios</mat-icon>
+        </button>
+        <span>{{ currentPage + 1 }}</span>
 
+        <button
+          class="btn-arrow"
+          mat-raised-button
+          (click)="nextPage()"
+          [disabled]="dataBaseLength.length / (currentPage + 1) <= pageSize"
+        >
+          <mat-icon>arrow_forward_ios</mat-icon>
+        </button>
+      </div>
+    </div>
     <div class="product-container">
-      <div class="product-block" *ngFor="let data of dataBase.slice(1)">
+      <div class="product-block" *ngFor="let data of dataBase; let i = index">
         <img
           class="picture-product"
           [src]="getImgPath(data[2])"
           alt="{{ data[2] }}"
         />
         <div class="bottom-block">
-          <div class="description-block">{{ data[1] }}</div>
+          <div class="description-block">
+            {{ aroundDescription(data[1]) }}
+          </div>
           <div class="cost-block">
             <span>Цена</span>
             <span>{{ aroundCost(data[6]) }} р.</span>

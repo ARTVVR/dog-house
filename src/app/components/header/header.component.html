@@ -86,8 +86,16 @@
           >
             <li>Главная</li>
           </button>
-          <button routerLinkActive="active-link" routerLink="/shop" mat-button>
-            <li>Товары</li>
+          <button
+            routerLinkActive="active-link"
+            routerLink="/shop"
+            mat-raised-button
+            color="warn"
+          >
+            <div class="products">
+              <mat-icon>list</mat-icon>
+              <li>Товары</li>
+            </div>
           </button>
           <button
             routerLinkActive="active-link"
@@ -173,21 +181,25 @@
         </button>
         <button
           (click)="isVisibleBurger = false"
+          routerLinkActive="active-link"
+          routerLink="/shop"
+          mat-raised-button
+          color="warn"
+          class="btn-link-burger-2"
+        >
+          <div class="products">
+            <mat-icon>list</mat-icon>
+            <li>Товары</li>
+          </div>
+        </button>
+        <button
+          (click)="isVisibleBurger = false"
           routerLink="/services"
           routerLinkActive="active-link"
           mat-stroked-button
           class="btn-link-burger"
         >
           <li>Услуги</li>
-        </button>
-        <button
-          (click)="isVisibleBurger = false"
-          routerLinkActive="active-link"
-          routerLink="/shop"
-          mat-stroked-button
-          class="btn-link-burger"
-        >
-          <li>Товары</li>
         </button>
         <button
           (click)="isVisibleBurger = false"

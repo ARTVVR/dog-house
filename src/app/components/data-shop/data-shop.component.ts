@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import * as XLSX from 'xlsx';
 import { HttpClient } from '@angular/common/http';
 import { DATADABE_ZOO_PRODUKT } from 'src/app/constants/constants';
-import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-data-shop',
@@ -28,26 +27,31 @@ export default class DataShopComponent implements OnInit {
     'Другое',
   ];
 
-  kek = true;
-
   id_section = 0;
 
-  pageSize = 7;
+  pageSize = 6;
 
   currentPage = 0;
 
-  onPageChange(event: PageEvent) {
-    this.pageSize = event.pageSize;
-    this.currentPage = event.pageIndex;
+  prevPage() {
+    this.currentPage -= 1;
     this.loadElements();
   }
 
+  nextPage() {
+    if (this.dataBase.length === this.pageSize) {
+      this.currentPage += 1;
+      this.loadElements();
+    }
+  }
+
   selectProduct() {
+    this.currentPage = 0;
     this.readExcelFile();
   }
 
   aroundCost(n: number) {
-    return n.toFixed(2);
+    return typeof n === 'number' ? n.toFixed(2) : n;
   }
 
   loadElements() {
@@ -65,7 +69,14 @@ export default class DataShopComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   getImgPath(id: number): string {
-    return `../../../assets/korm/${id}.jpg`;
+    const path = `../../../assets/korm/${id}.jpg`;
+    return path;
+  }
+
+  aroundDescription(str: string): string {
+    return str.length >= 50 && window.screen.width <= 500
+      ? `${str.slice(0, 50)}...`
+      : str;
   }
 
   readExcelFile() {
@@ -77,9 +88,13 @@ export default class DataShopComponent implements OnInit {
         const sheetName = workbook.SheetNames[this.id_section];
         const worksheet = workbook.Sheets[sheetName];
 
-        this.dataBase = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+        this.dataBase = XLSX.utils.sheet_to_json(worksheet, {
+          header: 1,
+          range: 1,
+        });
         this.dataBaseLength = XLSX.utils.sheet_to_json(worksheet, {
           header: 1,
+          range: 1,
         });
         this.loadElements();
       });
