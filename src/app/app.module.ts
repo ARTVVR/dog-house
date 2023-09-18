@@ -17,6 +17,7 @@ import MainComponent from './components/main/main.component';
 import GalleryPageComponent from './components/gallery-page/gallery-page.component';
 import AboutUsPageComponent from './components/about-us-page/about-us-page.component';
 import ServicesPageComponent from './components/services-page/services-page.component';
+import TemporaryModalWindow from './components/temporary-modal-window/temporary-modal-window.component';
 
 const mapConfig: YaConfig = {
   apikey: 'b6331ca0-fb8c-483b-93a0-c534b4023d24',
@@ -32,6 +33,7 @@ const mapConfig: YaConfig = {
     ServicesPageComponent,
     GalleryPageComponent,
     AboutUsPageComponent,
+    TemporaryModalWindow,
   ],
   imports: [
     BrowserModule,

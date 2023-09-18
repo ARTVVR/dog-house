@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
+import ModalService from './services/modal.service';
 
 declare const gtag: Function;
 @Component({
@@ -8,8 +9,8 @@ declare const gtag: Function;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export default class AppComponent {
-  constructor(private router: Router) {
+export default class AppComponent implements OnInit {
+  constructor(private router: Router, private modalService: ModalService) {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: any) => {
@@ -17,5 +18,9 @@ export default class AppComponent {
           page_path: event.urlAfterRedirects,
         });
       });
+  }
+
+  ngOnInit(): void {
+    this.modalService.openModal(0);
   }
 }
