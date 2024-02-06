@@ -13,5 +13,10 @@
     },
     "editor.formatOnSave": false
   },
-  "html.format.wrapAttributes": "force"
+  "html.format.wrapAttributes": "force",
+  "[html][typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  }
 }

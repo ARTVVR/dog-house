@@ -95,6 +95,13 @@
           </button>
           <button
             routerLinkActive="active-link"
+            routerLink="/pricing"
+            mat-button
+          >
+            <li>Цены</li>
+          </button>
+          <button
+            routerLinkActive="active-link"
             routerLink="/gallery"
             mat-button
           >
@@ -176,6 +183,15 @@
           class="btn-link-burger"
         >
           <li>Услуги</li>
+        </button>
+        <button
+          (click)="isVisibleBurger = false"
+          routerLinkActive="active-link"
+          routerLink="/pricing"
+          mat-stroked-button
+          class="btn-link-burger"
+        >
+          <li>Цены</li>
         </button>
         <button
           (click)="isVisibleBurger = false"
